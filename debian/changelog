@@ -1,0 +1,149 @@
+python3-cyberfusion-sync-support (1.2.7.3.1) unstable; urgency=low
+
+  - Publish to PyPI
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Wed, 21 Aug 2024 17:29:00 +0200
+
+python3-cyberfusion-sync-support (1.2.7.3) unstable; urgency=low
+
+  - Add archive_path_root_directory to UNIXUserHomeDirectoryArchive
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Sat, 17 Aug 2024 13:20:00 +0200
+
+python3-cyberfusion-sync-support (1.2.7.2) unstable; urgency=low
+
+  - Prevent side effects on UNIXUserHomeDirectoryArchiveRestoration init
+  - Remove filesystem path check
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 09 Aug 2024 23:53:00 +0200
+
+python3-cyberfusion-sync-support (1.2.7.1) unstable; urgency=low
+
+  - Remove requests dependency
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 03 Mar 2023 19:41:00 +0200
+
+python3-cyberfusion-sync-support (1.2.7) unstable; urgency=low
+
+  - Rename package to python3-cyberfusion-sync-support
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 03 Mar 2023 18:56:00 +0200
+
+python3-cyberfusion-sync-support (1.2.6) unstable; urgency=low
+
+  - Remove RabbitMQ handlers
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 03 Mar 2023 18:50:00 +0200
+
+python3-cyberfusion-sync-support (1.2.5.2) unstable; urgency=low
+
+  - Remove unused SyncSupport class
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 03 Mar 2023 18:29:00 +0200
+
+python3-cyberfusion-sync-support (1.2.5.1) unstable; urgency=low
+
+  - Do not inherit from ClusterSupport
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 03 Mar 2023 17:59:00 +0200
+
+python3-cyberfusion-sync-support (1.2.5) unstable; urgency=low
+
+  - Remove configurations
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 03 Mar 2023 17:30:00 +0200
+
+python3-cyberfusion-sync-support (1.2.4.4) unstable; urgency=low
+
+  - dx_unix_user_home_directory_download_archive: Set allowed domain to
+    nl-a.s3.cyberfusion.cloud
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Mon, 19 Oct 2022 14:03:00 +0200
+
+python3-cyberfusion-sync-support (1.2.4.3.1.1) unstable; urgency=low
+
+  - Update dependencies
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Tue, 4 Oct 2022 16:38:00 +0200
+
+python3-cyberfusion-sync-support (1.2.4.3.1) unstable; urgency=low
+
+  - Rename package to include python3
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Tue, 4 Oct 2022 16:11:00 +0200
+
+python3-cyberfusion-sync-support (1.2.4.3) unstable; urgency=low
+
+  - Set CyberfusionFile mode
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Thu, 15 Sep 2022 16:47:00 +0200
+
+python3-cyberfusion-sync-support (1.2.4.2) unstable; urgency=low
+
+  -  Use keywords arguments for CyberfusionTmpFile
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Thu, 15 Sep 2022 15:53:00 +0200
+
+python3-cyberfusion-sync-support (1.2.4.1) unstable; urgency=low
+
+  - Use new GitLab CI template
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Wed, 31 Aug 2022 10:48:00 +0200
+
+python3-cyberfusion-sync-support (1.2.4) unstable; urgency=low
+
+  - SystemdTmpFileConfiguration: Set age to 1d
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Tue, 02 Aug 2022 12:46:00 +0200
+
+python3-cyberfusion-sync-support (1.2.3) unstable; urgency=low
+
+  - UNIXUserHomeDirectoryArchiveRestoration: Make filesystem_path specifiable
+    to be able to restore to different path
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Tue, 02 Aug 2022 11:02:00 +0200
+
+python3-cyberfusion-sync-support (1.2.2) unstable; urgency=low
+
+  - UNIXUserHomeDirectoryArchiveRestoration: Make archive_path compatible
+    with subdirectories
+  - UNIXUserHomeDirectoryArchiveRestoration: Fix copying deleted, excluded
+    files and directories
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Tue, 02 Aug 2022 10:02:00 +0200
+
+python3-cyberfusion-sync-support (1.2.1) unstable; urgency=low
+
+  - Fix adding /usr/bin/cf-cluster-sync-configuration-manager-present
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Mon, 01 Aug 2022 12:03:00 +0200
+
+python3-cyberfusion-sync-support (1.2) unstable; urgency=low
+
+  - Add UNIX user sync
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Mon, 01 Aug 2022 11:53:00 +0200
+
+python3-cyberfusion-sync-support (1.1.1) unstable; urgency=low
+
+  - Remove dx_s3_download_file
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Tue, 26 Jul 2022 11:58:00 +0200
+
+python3-cyberfusion-sync-support (1.1) unstable; urgency=low
+
+  - Add dx_s3_download_file
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 18 Jul 2022 11:26:00 +0200
+
+python3-cyberfusion-sync-support (1.0.1) unstable; urgency=low
+
+  - Fix arguments passed to FilesystemComparison
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 08 Jul 2022 15:27:00 +0200
+
+python3-cyberfusion-sync-support (1.0) unstable; urgency=low
+
+  - Initial release
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Fri, 08 Jul 2022 12:26:00 +0200
