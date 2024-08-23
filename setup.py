@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="python3-cyberfusion-sync-support",
-    version="1.2.7.3.1",
+    version="1.2.7.4",
     description="Library for syncing objects (e.g. directories).",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -20,4 +20,9 @@ setup(
     ],
     package_dir={"": "src"},
     data_files=[],
+    install_requires=[
+        "cached_property==1.5.2",
+        "python3-cyberfusion-common~=2.9",
+        "python3-cyberfusion-cluster-support~=1.0",
+    ],
 )
