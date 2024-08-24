@@ -6,7 +6,6 @@ from typing import Generator
 import pytest
 from pytest_mock import MockerFixture  # type: ignore[attr-defined]
 
-from cyberfusion.SyncSupport import PATH_ARCHIVE
 from cyberfusion.SyncSupport.exceptions import (
     FilesystemPathNotRelativeError,
     IllegalMemberError,
@@ -65,13 +64,9 @@ def test_unix_user_home_directory_archive_restoration_attributes(
         )
     )
 
-    assert (
-        unix_user_home_directory_archive_restoration.home_directory
-        == Path.home()
-    )
-    assert (
-        unix_user_home_directory_archive_restoration.filesystem_path
-        == os.path.join(unix_user_home_directory, dummy_directory)
+    assert unix_user_home_directory_archive_restoration.home_directory == Path.home()
+    assert unix_user_home_directory_archive_restoration.filesystem_path == os.path.join(
+        unix_user_home_directory, dummy_directory
     )
     assert unix_user_home_directory_archive_restoration.old_path.startswith(
         os.path.join(
@@ -87,21 +82,13 @@ def test_unix_user_home_directory_archive_restoration_attributes(
             ".archive-restore-new.dummy_files-",
         )
     )
-    assert (
-        unix_user_home_directory_archive_restoration.temporary_path.startswith(
-            os.path.join(
-                temporary_path_root_path, ".archive-restore-tmp.dummy_files-"
-            )
-        )
+    assert unix_user_home_directory_archive_restoration.temporary_path.startswith(
+        os.path.join(temporary_path_root_path, ".archive-restore-tmp.dummy_files-")
     )
 
-    assert os.path.isdir(
-        unix_user_home_directory_archive_restoration.temporary_path
-    )
+    assert os.path.isdir(unix_user_home_directory_archive_restoration.temporary_path)
     assert (
-        os.stat(
-            unix_user_home_directory_archive_restoration.temporary_path
-        ).st_mode
+        os.stat(unix_user_home_directory_archive_restoration.temporary_path).st_mode
         == 16832
     )
 
@@ -140,9 +127,7 @@ def test_unix_user_home_directory_archive_restoration_restore_directory_not_exis
     )
     spy_lexists.assert_has_calls(
         [
-            mocker.call(
-                unix_user_home_directory_archive_restoration.filesystem_path
-            ),
+            mocker.call(unix_user_home_directory_archive_restoration.filesystem_path),
             mocker.call(unix_user_home_directory_archive_restoration.old_path),
         ],
     )
@@ -185,9 +170,7 @@ def test_unix_user_home_directory_archive_restoration_restore_directory_exists(
     )
     spy_lexists.assert_has_calls(
         [
-            mocker.call(
-                unix_user_home_directory_archive_restoration.filesystem_path
-            ),
+            mocker.call(unix_user_home_directory_archive_restoration.filesystem_path),
             mocker.call(unix_user_home_directory_archive_restoration.old_path),
         ],
     )
@@ -239,9 +222,7 @@ def test_unix_user_home_directory_archive_restoration_restore_copy_file(
             filesystem_path=dummy_directory,
             archive_path=archive,
             temporary_path_root_path=temporary_path_root_path,
-            exclude_paths=[
-                "subdir/dummy_files/only_in_right_and_excluded.txt"
-            ],
+            exclude_paths=["subdir/dummy_files/only_in_right_and_excluded.txt"],
         )
     )
 
@@ -253,7 +234,7 @@ def test_unix_user_home_directory_archive_restoration_restore_copy_file(
             "only_in_right_and_excluded.txt",
         ),
         "w",
-    ) as f:
+    ):
         pass
 
     with open(
@@ -262,7 +243,7 @@ def test_unix_user_home_directory_archive_restoration_restore_copy_file(
             "only_in_right_and_not_excluded.txt",
         ),
         "w",
-    ) as f:
+    ):
         pass
 
     unix_user_home_directory_archive_restoration.replace()
