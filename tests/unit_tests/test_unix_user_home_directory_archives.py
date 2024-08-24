@@ -6,9 +6,7 @@ from pathlib import Path
 from typing import Generator
 
 import pytest
-from pytest_mock import MockerFixture  # type: ignore[attr-defined]
 
-from cyberfusion.SyncSupport import PATH_ARCHIVE
 from cyberfusion.SyncSupport.exceptions import StorePathNotRelativeError
 from cyberfusion.SyncSupport.unix_users import UNIXUserHomeDirectoryArchive
 
@@ -63,9 +61,7 @@ def test_unix_user_home_directory_archive_create_permissions(
 
     assert os.path.isfile(unix_user_home_directory_archive.archive_path)
     assert (
-        stat.S_IMODE(
-            os.lstat(unix_user_home_directory_archive.archive_path).st_mode
-        )
+        stat.S_IMODE(os.lstat(unix_user_home_directory_archive.archive_path).st_mode)
         == 0o600
     )
 

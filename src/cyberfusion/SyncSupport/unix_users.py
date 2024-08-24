@@ -283,10 +283,7 @@ class UNIXUserHomeDirectoryArchiveRestoration:
             os.path.join(self.temporary_path, self.store_path),
             self.filesystem_path,
         ):
-            if (
-                os.path.relpath(f, self.home_directory)
-                not in self.exclude_paths
-            ):
+            if os.path.relpath(f, self.home_directory) not in self.exclude_paths:
                 continue
 
             destination_path = os.path.join(
@@ -301,10 +298,7 @@ class UNIXUserHomeDirectoryArchiveRestoration:
             os.path.join(self.temporary_path, self.store_path),
             self.filesystem_path,
         ):
-            if (
-                os.path.relpath(f, self.home_directory)
-                not in self.exclude_paths
-            ):
+            if os.path.relpath(f, self.home_directory) not in self.exclude_paths:
                 continue
 
             destination_path = os.path.join(

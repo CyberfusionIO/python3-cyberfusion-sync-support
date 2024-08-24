@@ -1,14 +1,11 @@
-import getpass
 import os
 import shutil
-from pathlib import Path
-from typing import Generator, List
+from typing import Generator
 
 import pytest
 from pytest_mock import MockerFixture  # type: ignore[attr-defined]
 
 from cyberfusion.Common import generate_random_string
-from cyberfusion.SyncSupport import PATH_ARCHIVE
 from cyberfusion.SyncSupport.unix_users import UNIXUserHomeDirectoryArchive
 
 
@@ -51,7 +48,7 @@ def unix_user_home_directory(
 
 @pytest.fixture
 def dummy_directory(
-    unix_user_home_directory: Generator[str, None, None]
+    unix_user_home_directory: Generator[str, None, None],
 ) -> Generator[str, None, None]:
     path = os.path.join(unix_user_home_directory, "subdir", "dummy_files")
 
