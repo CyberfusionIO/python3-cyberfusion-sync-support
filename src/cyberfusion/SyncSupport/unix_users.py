@@ -7,7 +7,7 @@ import tarfile
 from pathlib import Path, PosixPath
 from typing import List, Optional, Tuple
 
-from cached_property import cached_property
+from functools import cached_property
 
 from cyberfusion.Common import generate_random_string, get_md5_hash
 from cyberfusion.Common.FilesystemComparison import (
