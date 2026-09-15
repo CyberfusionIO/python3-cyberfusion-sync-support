@@ -1,3 +1,9 @@
+python3-cyberfusion-sync-support (1.4.1) unstable; urgency=medium
+
+  * Don't pin library versions to exact versions
+
+ -- William Edwards <wedwards@cyberfusion.nl>  Tue, 15 Sep 2026 16:21:23 +0000
+
 python3-cyberfusion-sync-support (1.4) unstable; urgency=low
 
   - Update to Trixie
